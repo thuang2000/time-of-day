@@ -79,7 +79,7 @@
         let myPic = " ";
 
         //TESTING ONLY, NEED TO REMOVE FOLLOWING LINE:
-        myHour = 14;
+        myHour = 19;
 
         if(myHour >= 5 && myHour < 12){
         //alert("It's morning");
@@ -87,17 +87,20 @@
         myColor = "orange";
         myPic = "morning.jpg";
 
-        } else if(myHour >= 12 && myHour < 18){
+        }else if(myHour >= 12 && myHour < 18){
         mySentence = "Good Afternoon!";
         myColor = "green";
         myPic = "afternoon.jpg";
 
-
-
+        }else if(myHour >= 18 && myHour < 23){
+        mySentence = "Good Evening!";
+        myColor = "blue";
+        myPic = "evening.jpg";
         }else{
-        //alert("It's not after noon");
-        mySentence = "It's not after noon";
+        //alert("It's night);
+        mySentence = "Good Night!";
         myColor = "purple";
+        myPic = "night.jpg";
         }
 
         //adds sentence to page
