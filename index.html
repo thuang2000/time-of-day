@@ -79,7 +79,7 @@
         let myPic = " ";
 
         //TESTING ONLY, NEED TO REMOVE FOLLOWING LINE:
-        myHour = 19;
+        myHour = 2;
 
         if(myHour >= 5 && myHour < 12){
         //alert("It's morning");
@@ -110,10 +110,11 @@
         //document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
 
+        //adds image path to pic
         myPic = "images/" + myPic;
 
-        console.log(myPic);
-        alert(myPic);
+        //console.log(myPic);
+        //alert(myPic);
 
         //change to picture
         document.getElementById("time-pic").src = myPic;
