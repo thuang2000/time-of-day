@@ -47,6 +47,8 @@
         <h1 id="main-greeting">Time of Day by Tianxiang Huang</h1>
         
         <h2 id="time-text">What time is it?</h2>
+        
+        <h3 id="day-text">What weekday is it</h3>
 
         <p>This page will change based on the hour of the day.</p>
         <p>Dynamic page that uses JavaScript to determine the current hour,
@@ -85,16 +87,19 @@
            Night (11pm to 5am)
         */
 
-
-
         let myDate = new Date();
         let myHour = myDate.getHours();
         let mySentence = " ";
         let myColor = " ";
         let myPic = " ";
 
+        //adds weekday
+        let myDayNum = myDate.getDay();
+        let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"];
+        let myDay = weekDay[myDayNum];
+
         //TESTING ONLY, NEED TO REMOVE FOLLOWING LINE:
-        myHour = 2;
+        //myHour = 2;
 
         if(myHour >= 5 && myHour < 12){
         //alert("It's morning");
@@ -121,6 +126,9 @@
         //adds sentence to page
         document.getElementById("time-text").innerHTML = mySentence;
 
+        //adds weekday to page
+        document.getElementById("day-text").innerHTML = myDay;
+
         //adds color to html
         //document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
@@ -133,18 +141,6 @@
 
         //change to picture
         document.getElementById("time-pic").src = myPic;
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Fixes HTML/CSS Checker links
         document.addEventListener("DOMContentLoaded", function() {
